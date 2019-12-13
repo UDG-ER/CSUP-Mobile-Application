@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ZakaziPregled"
+    android:background="@drawable/back2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#50000000"
+        android:text="@string/zakazivanje_pregleda"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+
+    <LinearLayout
+        android:layout_width="253dp"
+        android:layout_height="373dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginTop="80dp"
+        android:paddingLeft="30dp"
+        android:background="#50000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unesi_ime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ime"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/ime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unesi_prezime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prrezime"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/prezime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unesi_pol"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:text="Pol:"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+           <CheckBox
+               android:id="@+id/muski"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Muški"
+               android:textColor="@android:color/white"
+               />
+
+            <CheckBox
+                android:id="@+id/zenski"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:text="Ženski"
+                android:textColor="@android:color/white"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/unesi_datum_rodjenja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datum rođenja:"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/datum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:textColor="@android:color/white"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unesi_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Broj telefona:"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/broj_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unesi_adresu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adresa"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/adresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/unesi_opis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/opis_pregleda"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/opis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/unesi_datum_pregleda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/datum_pregleda"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/datum_pregleda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:textColor="@android:color/white"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dugme"
+        android:layout_width="185dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="502dp"
+        android:background="@drawable/button_background"
+        android:text="@string/zakazi"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
