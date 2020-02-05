@@ -20,7 +20,7 @@ import de.codecrafters.tableview.toolkit.SimpleTableDataAdapter;
 import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter;
 
 public class MainActivity extends AppCompatActivity {
-private Button login_btn;
+private Button login_btn,doktor;
 private EditText username,password;
     private static final String DB_URL = "jdbc:mysql://192.168.43.138/baza";
     private static final String USER = "bane";
@@ -33,6 +33,17 @@ private EditText username,password;
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
 
+
+        doktor = findViewById(R.id.doktor);
+
+        doktor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inte = new Intent(MainActivity.this,doktor_login.class);
+
+                startActivity(inte);
+            }
+        });
 
         login_btn = findViewById(R.id.login_btn);
         login_btn.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +83,7 @@ private EditText username,password;
 
                 Statement st = conn.createStatement();
 
-                String sql = "Select * from zubar";
+                String sql = "Select * from zakazivanje";
 
 
 
@@ -97,6 +108,7 @@ if(usernameBaza.equals(username.getText().toString()) && passwordBaza.equals(pas
     brojac = 1;
 
     Intent intent = new Intent(MainActivity.this,StomatoloskaOrdinacija.class);
+    intent.putExtra("username", usernameBaza);
     startActivity(intent);
 
 }
