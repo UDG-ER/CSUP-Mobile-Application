@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Zaposleni"></activity>
+        <activity android:name=".doktor_pregledi"></activity>
+        <activity android:name=".doktor_meni" />
+        <activity android:name=".doktor_login" />
+        <activity android:name=".Zaposleni" />
         <activity android:name=".SviPregledi" />
         <activity android:name=".ZakaziPregled" />
         <activity android:name=".StomatoloskaOrdinacija" />

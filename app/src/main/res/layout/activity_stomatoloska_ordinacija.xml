@@ -45,7 +45,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="286dp"
         android:background="@drawable/button_background"
-        android:text="@string/svi_pregledi"
+        android:text="@string/moji_pregledi"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@android:color/white"
         android:textStyle="bold" />

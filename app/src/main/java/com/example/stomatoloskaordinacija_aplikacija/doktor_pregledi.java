@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,28 +14,24 @@ import de.codecrafters.tableview.TableView;
 import de.codecrafters.tableview.toolkit.SimpleTableDataAdapter;
 import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter;
 
-public class SviPregledi extends AppCompatActivity {
-
-     String[][] spaceProbes;
+public class doktor_pregledi extends AppCompatActivity {
+    String[][] spaceProbes;
 
     private static final String DB_URL = "jdbc:mysql://192.168.43.138/baza";
     private static final String USER = "bane";
     private static final String PASS = "bane";
-    private String username;
+
 
     static String[] spaceProbeHeaders = {"ID","Ime i Prezime","Datum Pregleda","Opis pregleda"};
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_svi_pregledi);
-
-        Bundle extras = getIntent().getExtras();
-         username = extras.getString("username");
+        setContentView(R.layout.activity_doktor_pregledi);
 
 
-        new SviPregledi.MyTask().execute();
+
+
+        new doktor_pregledi.MyTask().execute();
 
 
 
@@ -68,7 +63,7 @@ public class SviPregledi extends AppCompatActivity {
 
                 Statement st = conn.createStatement();
 
-                String sql = "Select * from zakazivanje where ime = '" + username + "'" ;
+                String sql = "Select * from zakazivanje";
 
 
 
@@ -85,9 +80,9 @@ public class SviPregledi extends AppCompatActivity {
 
 
 
-spaceProbes = new String[a][];
+                spaceProbes = new String[a][];
                 //Store data to array
-int brojac = 0;
+                int brojac = 0;
                 while(rs.next()){
 
 
@@ -101,8 +96,8 @@ int brojac = 0;
                     String id2 = Integer.toString(id);
 
 
-    spaceProbes[brojac] = new String[]{id2, ime, datum_pregleda, opis_pregleda};
-    brojac = brojac + 1;
+                    spaceProbes[brojac] = new String[]{id2, ime, datum_pregleda, opis_pregleda};
+                    brojac = brojac + 1;
 
 
 
@@ -140,10 +135,10 @@ int brojac = 0;
 
 
             tableView.setHeaderBackgroundColor(Color.parseColor("#00e5ff"));
-            tableView.setHeaderAdapter(new SimpleTableHeaderAdapter(SviPregledi.this,spaceProbeHeaders));
+            tableView.setHeaderAdapter(new SimpleTableHeaderAdapter(doktor_pregledi.this,spaceProbeHeaders));
             tableView.setColumnCount(4);
 
-            tableView.setDataAdapter(new SimpleTableDataAdapter(SviPregledi.this,spaceProbes));
+            tableView.setDataAdapter(new SimpleTableDataAdapter(doktor_pregledi.this,spaceProbes));
 
             super.onPostExecute(Result);
 
