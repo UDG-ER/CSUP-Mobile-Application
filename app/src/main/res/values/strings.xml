@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">StomatoloskaOrdinacija_ConfiDent</string>
+    <string name="logo">Image</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="dobrodosli">Dobrodošli</string>
+    <string name="zakazi_pregled">Zakaži pregled</string>
+    <string name="moji_pregledi">Moji pregledi</string>
+    <string name="zaposleni">Zaposleni</string>
+    <string name="logout">Logout</string>
+    <string name="image2">Image2</string>
+    <string name="zakazivanje_pregleda">Zakazivanje pregleda</string>
+    <string name="zakazi">Zakaži</string>
+    <string name="ime">Ime:</string>
+    <string name="opis_pregleda">Opis pregleda:</string>
+    <string name="datum_pregleda">Datum pregleda:</string>
+    <string name="adresa">Adresa:</string>
+    <string name="prrezime">Prezime:</string>
+    <string name="svi_pregledi">Svi pregledi</string>
+</resources>
